@@ -1,10 +1,26 @@
-import * as React from 'react';
-import { Button, View } from 'react-native';
+import * as React from "react";
+import { Button, View, TouchableOpacity, Text, ScrollView } from "react-native";
+import { Header } from "react-native-elements";
+import { Icon } from "react-native-elements";
 
 export default function Comparison({ navigation }) {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Button onPress={() => navigation.goBack()} title="Go back home" />
-      </View>
-    );
-  }
+  return (
+    <View style={{ flex: 1 }}>
+      <Header
+        backgroundColor="transparent"
+        leftComponent={
+          <Icon
+            name="menu"
+            type="ionicon"
+            color="#000"
+            onPress={() => navigation.openDrawer()}
+          />
+        }
+        centerComponent={{
+          text: "Comparison",
+          style: { color: "#000", fontWeight: "bold", fontSize: 20 },
+        }}
+      />
+    </View>
+  );
+}
