@@ -15,7 +15,6 @@ import { Avatar } from "react-native-elements";
 
 export default function Persona({ navigation }) {
   const [modal1, setModal1] = useState(false);
-  const [modal2, setModal2] = useState(false);
 
   return (
     <View style={{ flex: 1 }}>
